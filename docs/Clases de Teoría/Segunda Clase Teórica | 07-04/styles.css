@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "W95FA";
+  src:
+    url("/Assets/w95fa.woff2") format("woff2"),
+    url("/Assets/w95fa.woff") format("woff"),
+    url("/Assets/W95FA.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.win95-button {
+  /* Windows 95 style button */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  vertical-align: middle;
+  height: 215px;
+  width: 515px;
+  font-family: "W95FA";
+  font-size: 130px;
+  transform: scaleY(0.89);
+  letter-spacing: 6px;
+  text-rendering: geometricPrecision;
+  color: black;
+  background-color: darkgray;
+  border-left: 10px solid #fff;
+  border-top: 10px solid #fff;
+  border-right: 10px solid gray;
+  border-bottom: 10px solid gray;
+  box-shadow: 5px 5px 0px 5.5px rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+img {
+  height: 150px;
+  vertical-align: middle;
+  /* margin-right: 1px; */
+}
+
+.win95-button:active {
+  /* Pressed state */
+  border-left: 10px solid gray;
+  border-top: 10px solid gray;
+  border-right: 10px solid #fff;
+  border-bottom: 10px solid #fff;
+  box-shadow: none;
+}
+
+.tema {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

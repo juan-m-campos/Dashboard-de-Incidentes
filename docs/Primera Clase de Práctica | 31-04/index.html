@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>Empresa de Software</title>
+  </head>
+  <body>
+    <!-- Una empresa de desarrollo desea gestionar los incidentes que ocurren durante las pruebas de software, para
+        lo cual se debe diseñar un mockup en HTML5 que permita tener una idea avanzada del producto final. El
+        proyecto debe implementarse utilizando Visual Studio Code y etiquetas HTML5. Debe contar con el siguiente
+        recurso:
+            1. index.html: Página inicial estructurada de la siguiente manera:
+                a. Header: Incluye el logo, nombre de la empresa y un buscador de incidentes, sin implementar la
+                    funcionalidad. ( ver figura 1)
+                b. Listado de incidentes con la información de cada uno (ver figura 2) -->
+    <!-- Consideraciones
+            - Las figuras 1 y 2 son ejemplos de guía, la estructura y diseño del buscador o listado de
+                incidentes queda a criterio del alumno. -->
+
+    <header>
+      <img src="img/logo-removebg-preview.png" alt="Logo de la empresa" />
+      <h1>Empresa de Software</h1>
+      <form>
+        <input type="text" placeholder="🔎 Buscar incidentes..." />
+      </form>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Título</th>
+          <th>Descripción</th>
+          <th>Gravedad</th>
+          <th>Fecha de Creación</th>
+          <th>Servicio Impactado</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Error de inicio de sesión</td>
+          <td>Los usuarios no pueden iniciar sesión en la aplicación.</td>
+          <td><span class="severity critical">Grave</span></td>
+          <td>2026-03-31</td>
+          <td>WebUI</td>
+          <td>Abierto</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Falla en la carga de datos</td>
+          <td>
+            La aplicación no carga los datos correctamente en la sección de
+            informes.
+          </td>
+          <td><span class="severity medium">Medio</span></td>
+          <td>2026-03-30</td>
+          <td>Database</td>
+          <td>En progreso</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Reporte sin envío</td>
+          <td>
+            Los informes no llegan al módulo de ventas después de generarlos.
+          </td>
+          <td><span class="severity high">Alto</span></td>
+          <td>2026-03-29</td>
+          <td>Ventas</td>
+          <td>Pendiente</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Interfaz lenta</td>
+          <td>
+            La interfaz de usuario se vuelve lenta al navegar por el panel de
+            control.
+          </td>
+          <td><span class="severity low">Bajo</span></td>
+          <td>2026-03-28</td>
+          <td>WebUI</td>
+          <td>Cerrado</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 24px;
+        background-color: #f2f2f2;
+      }
+
+      header img {
+        height: 50px;
+      }
+
+      header input {
+        padding: 8px 12px;
+        border: 1px solid #d6dae3;
+        border-radius: 9px;
+        font-size: 1rem;
+      }
+
+      input[type="text"] {
+        width: 90px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+      }
+
+      input[type="text"]:focus {
+        width: 100%;
+      }
+
+      table {
+        width: 90%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 20px auto;
+        border: 1px solid #d6dae3;
+        border-radius: 16px;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+      }
+
+      th,
+      td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #eceef3;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f7f8fb;
+        color: #3d4451;
+        font-weight: 700;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #fafbff;
+      }
+
+      tbody tr:hover {
+        background-color: #eef4ff;
+      }
+
+      tbody tr:last-child td {
+        border-bottom: none;
+      }
+
+      .severity {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #fff;
+        white-space: nowrap;
+      }
+
+      .severity.low {
+        background-color: #4caf50;
+      }
+
+      .severity.medium {
+        background-color: #f0a325;
+      }
+
+      .severity.high {
+        background-color: #d9534f;
+      }
+
+      .severity.critical {
+        background-color: #8b1c1c;
+      }
+    </style>
+  </body>
+</html>
