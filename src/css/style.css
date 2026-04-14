@@ -2,16 +2,16 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: lightgray;
+  background-color: #83a598;
   display: grid;
   grid-template-columns: 200px 1fr;
+  height: 100vh;
 }
 
 header {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 16px 24px;
+  margin-right: 15px;
 }
 
 header img {
@@ -21,30 +21,61 @@ header img {
 .sidebar {
   display: flex;
   flex-direction: column;
-  background: lightgray;
-  height: 100vh;
+  background: #83a598;
+  align-items: center;
+  padding: 20px 0;
+  gap: 14rem;
 }
 
 .elementos_sidebar {
   list-style: none;
-  padding: 0;
-  margin: 2px 0 0 20px;
-  align-items: center;
-  justify-content: center;
+  margin-right: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  border-radius: 9px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+a:hover {
+  background-color: #fbf1c7;
+  color: #000;
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
-  background-color: #fff;
+  background-color: #fbf1c7;
   padding: 20px;
+  box-shadow: inset 15px 0 25px 0 rgba(0, 0, 0, 0.2);
+}
+
+.buscador-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0 20px 0;
 }
 
 .buscador {
   padding: 8px 12px;
-  border: 1px solid #d6dae3;
+  border: 1px solid #f9f5d7;
   border-radius: 9px;
   font-size: 1rem;
+  background: #f9f5d7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes pulseAnimation {
@@ -57,13 +88,14 @@ main {
   }
 }
 
-input:hover {
+.buscador:focus {
   animation-name: pulseAnimation;
   animation-duration: 0.5s;
   animation-timing-function: ease;
   animation-iteration-count: 1;
   animation-direction: normal;
   animation-fill-mode: both;
+  outline: none;
 }
 
 table {
@@ -71,32 +103,36 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   margin: 30px auto;
-  border: 1px solid #d6dae3;
+  border: 1px solid #f9f5d7;
   border-radius: 2rem;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #fbf1c7;
   box-shadow: 0 0px 40px 10px rgba(0, 0, 0, 0.08);
 }
 
 th,
 td {
   padding: 14px 16px;
-  border-bottom: 1px solid #eceef3;
+  border-bottom: 1px solid #f9f5d7;
   text-align: left;
 }
 
 th {
-  background-color: #f7f8fb;
+  background-color: #f9f5d7;
   color: #3d4451;
   font-weight: 700;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #fafbff;
+  background-color: #f9f5d7;
 }
 
 tbody tr:hover {
-  background-color: #eef4ff;
+  background-color: #f9f5d7;
+  box-shadow: inset 0 0 17px rgba(0, 0, 0, 0.1);
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
 tbody tr:last-child td {
