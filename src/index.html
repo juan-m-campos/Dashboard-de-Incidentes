@@ -57,12 +57,34 @@
     </nav>
 
     <main>
-      <form class="buscador-container">
+      <form class="form-container">
         <input
           type="text"
           placeholder="🔎 Buscar incidentes..."
           class="buscador"
         />
+        <!-- # Adding filters for searching incidents in the table such as Gravedad, Estado y Responsable (issue #3) -->
+        <select class="gravedad">
+          <option value="">Filtrar por gravedad</option>
+          <option value="critical">Grave</option>
+          <option value="high">Alto</option>
+          <option value="medium">Medio</option>
+          <option value="low">Bajo</option>
+        </select>
+        <select class="estado">
+          <option value="">Filtrar por estado</option>
+          <option value="open">Abierto</option>
+          <option value="pending">Pendiente</option>
+          <option value="in_progress">En progreso</option>
+          <option value="closed">Cerrado</option>
+        </select>
+        <select class="responsable">
+          <option value="">Filtrar por responsable</option>
+          <option value="carlos">Carlos</option>
+          <option value="ana">Ana</option>
+          <option value="maria">María</option>
+          <option value="juan">Juan</option>
+        </select>
       </form>
       <table>
         <thead>
