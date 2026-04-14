@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Empresa de Software - Incidencias</title>
+  </head>
+  <!-- TP2: -->
+  <!-- Realice los siguientes cambios al TP01 
+  El mockup debe contar con los siguientes recursos: 
+    1. incidencia.html: Página para registrar una incidencia con las siguientes características: 
+      a. Proyecto: Texto. Selección simple: Listado de nombres de proyectos 
+      b. Severidad: Texto. Selección simple: Valores posibles: CRÍTICA , MEDIA 
+      c. Estado: Texto. Selección simple. Valores posibles: DETECTADA, EN PROGRESO, MITIGADA 
+      d. Descripción: Texto en mayúsculas. Obligatorio. Longitud máxima 128 
+      e. Fecha Creación: Fecha. Obligatorio 
+      f. Responsable: Texto. Selección simple: Listado de nombres de usuarios 
+      g. Servicios Impactados: Texto. Selección múltiple. Valores posibles: WEBUI, DATABASE, BILLING, DATA, SECURITY, MAIL, REPORTS 
+    2. style.css: Con la definición de todos los estilos utilizados. 
+    3. app.js: Con la definición del comportamiento de la página. 
+    Consideraciones: 
+    ● Los recursos HTML deben presentarse con estilos bien definidos por ejemplo: cabecera con un banner o
+  logo, pie de página, colores, tipografía, etc. Los formularios alineados, con colores agradables y espaciado correcto. ● No debe mezclar las capas en ningún caso, es decir que los HTML no pueden tener definidas declaraciones de
+  estilos. 
+  ● Puede utilizar hojas de estilo free descargadas de la web. 
+  ● El enlace para el registro de incidentes debe estar ubicado en la cabecera de la página index.html. 
+  ● El formulario para registrar una incidencia deberá contar con un botón (“Guardar”) tipo submit y cada vez que se haga click en este mostrar por pantalla los datos ingresados en el formulario. -->
+  <body>
+    <nav class="sidebar">
+      <header>
+        <img
+          src="assets/img/logo-removebg-preview.png"
+          alt="Logo de la empresa"
+        />
+        <h1>E de S</h1>
+      </header>
+      <ul class="elementos_sidebar">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Incidentes</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Reportes</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2 class="titulo-incidencias">Registrar Incidencia</h2>
+      <form class="form-incidencia">
+        <div class="form-group">
+          <label for="proyecto">Proyecto:</label>
+          <select name="proyecto" required>
+            <option value="">Seleccione un proyecto</option>
+            <option value="proyecto1">Proyecto 1</option>
+            <option value="proyecto2">Proyecto 2</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="severidad">Severidad:</label>
+          <select name="severidad" required>
+            <option value="">Seleccione la severidad</option>
+            <option value="critical">CRÍTICA</option>
+            <option value="medium">MEDIA</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="estado">Estado:</label>
+          <select name="estado" required>
+            <option value="">Seleccione el estado</option>
+            <option value="detected">DETECTADA</option>
+            <option value="in_progress">EN PROGRESO</option>
+            <option value="mitigated">MITIGADA</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="descripcion">Descripción:</label>
+          <textarea
+            name="descripcion"
+            class="descripcion"
+            maxlength="128"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="fecha_creacion">Fecha de Creación:</label>
+          <input type="date" name="fecha_creacion" required />
+        </div>
+        <div class="form-group">
+          <label for="responsable">Responsable:</label>
+          <select name="responsable" required>
+            <option value="">Seleccione un responsable</option>
+            <option value="carlos">Carlos</option>
+            <option value="ana">Ana</option>
+            <option value="maria">María</option>
+            <option value="juan">Juan</option>
+          </select>
+          <div class="form-group">
+            <label for="servicios_impactados">Servicios Impactados:</label>
+            <select name="servicios_impactados" required>
+              <option value="webui">WEBUI</option>
+              <option value="database">DATABASE</option>
+              <option value="billing">BILLING</option>
+              <option value="data">DATA</option>
+              <option value="security">SECURITY</option>
+              <option value="mail">MAIL</option>
+              <option value="reports">REPORTS</option>
+            </select>
+          </div>
+          <button type="submit" class="submit-btn">Registrar Incidencia</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

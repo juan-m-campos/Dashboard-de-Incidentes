@@ -5,7 +5,7 @@ body {
   background-color: #83a598;
   display: grid;
   grid-template-columns: 200px 1fr;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header {
@@ -180,4 +180,66 @@ tbody tr:last-child td {
 
 .severity.critical {
   background-color: #8b1c1c;
+}
+
+/* Incidencias */
+.titulo-incidencias {
+  font-size: 2rem;
+  color: #3d4451;
+  margin-bottom: 20px;
+}
+
+.form-incidencia {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3d4451;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 8px 12px;
+  border: 1px solid #f9f5d7;
+  border-radius: 9px;
+  font-size: 1rem;
+  background: #f9f5d7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.descripcion {
+  resize: none;
+  min-height: 80px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+}
+
+.submit-btn {
+  margin-top: 25px;
+  align-self: center;
+  padding: 10px 20px;
+  background-color: #98971a;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
